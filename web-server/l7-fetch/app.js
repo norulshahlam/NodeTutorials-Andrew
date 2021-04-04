@@ -26,6 +26,8 @@ const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 const chalk = require("chalk");
 
+const port = process.env.PORT || 3000;
+
 app.set("view engine", "hbs");
 app.set("views", viewsPath);
 hbs.registerPartials(partialsPath);
@@ -118,13 +120,13 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("server is up on port 3000");
+app.listen(port, () => {
+  console.log("server is up on port " + port);
 });
 
 /*
 now with 3 pages created, simply go to url to load the static pages
-http://localhost:3000/
+http://localhost:/+port
 http://localhost:3000/help.html
 http://localhost:3000/about.html
 
