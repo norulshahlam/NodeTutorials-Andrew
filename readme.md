@@ -41,3 +41,9 @@ from
 to
 
 ### fetch(`/weather?address=${value}`)
+
+This makes the URL relative to the domain name so,
+
+if your domain is www.website.com then it'll go to www.website.com/weather?address=boston.
+
+if your domain is localhost, then it'll go to localhost/weather?address=boston.
