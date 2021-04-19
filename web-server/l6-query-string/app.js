@@ -43,8 +43,7 @@ app.get("/help", (req, res) => {
   });
 });
 
-//1.
-// http://localhost:3000/products?search=games&rating=5
+//1. run: http://localhost:3000/products?search=games&rating=5
 //req stores the above query
 app.get("/products", (req, res) => {
   //refers to search=games
@@ -59,6 +58,7 @@ app.get("/products", (req, res) => {
   });
 });
 
+//run: http://localhost:3000/weather?address=boston
 app.get("/weather", (req, res) => {
   //refers to address=boston
   if (!req.query.address) {
@@ -67,7 +67,6 @@ app.get("/weather", (req, res) => {
     });
   }
 
-  // http://localhost:3000/weather?address=boston
   geocode(req.query.address, (error, { lat, long, location } = {}) => {
     if (error) {
       return res.send({

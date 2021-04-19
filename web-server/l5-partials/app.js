@@ -6,7 +6,7 @@ continue from previous lesson,
 
 as the name suggests it allows you to create a little template which is part of a bigger web page. eg parts of the web page that you're gonna end up reusing across multiple pages in your site. This would be things like headers or footers where you want the exact same thing showing on every page
 
-2. when we make changes to js, nodemon will detect changes and restart server. nodemon doesnt do the same for html page changes. so to enable nodemon to  detect changes in html, run:
+2. when we make changes to js, BY DEFAULT. nodemon will detect changes and restart server. nodemon doesnt do the same for changes made on other file types. so to enable for other file types, run:
 
 nodemon app.js -e js,hbs,css
 
@@ -32,7 +32,7 @@ app.set("views", viewsPath);
 /* set up partials dir */
 hbs.registerPartials(partialsPath);
 
-// Setup static directory to serve. u also need this for css!
+// Setup static directory to serve. u also need this for css for your pages to link!
 app.use(express.static(__dirname));
 
 //set route

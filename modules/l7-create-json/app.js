@@ -10,7 +10,7 @@ How to:
 const fs = require("fs");
 
 //1
-const profile = { name: "Gunther", planet: "Earth", age: 54 };
+const profile = { name: "Guntherrrr", planet: "Earth", age: 54 };
 //2
 const profileJson = JSON.stringify(profile);
 //3

@@ -1,10 +1,9 @@
 /*
 1. obj property shorthand
-
 2. destructuring obj in global scope
 3. destructuring obj as param input
 
-whole goal of  structuring is to extract object properties end their values into individual variables so instead of a 'product.price', we could have 'price' variable with the value of 3.
+whole goal of  structuring is to extract object properties and their values into individual variables so instead of calling a 'product.price', we could have 'price' variable with the value of 3.
 
 */
 
@@ -17,7 +16,7 @@ const takeout = {
   //w/o shorthand
   food: food,
 
-  //w shorthand
+  //w shorthand. note: both name must be the same to do this
   drink,
   dessert,
 };
@@ -40,8 +39,8 @@ const { name, address: myAdd } = product;
 
 console.log(name, myAdd);
 
-//3. destruc obj as param in func
-const transac = (type, { status, employed }) => {
+//3. destruc obj as param in func. in case the obj returns undefined, then this will set its value to null. else the app will crash cos u cant destructure undefined
+const transac = (type, { status, employed } = {}) => {
   console.log(type, status, employed);
 };
 transac("info: ", product);

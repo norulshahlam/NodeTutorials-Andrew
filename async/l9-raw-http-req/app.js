@@ -12,9 +12,10 @@ const request = http.request(url, (response) => {
   response.on("data", (chunk) => {
     //res received is in chunk, need to convert
     data = data + chunk.toString();
-    console.log(chalk.blue("data"));
+    console.log(chalk.blue(data));
   });
   response.on("end", () => {
+    // at this point, `body` has the entire request body stored
     const body = JSON.parse(data);
     console.log(chalk.yellow("end"));
     console.log(body);

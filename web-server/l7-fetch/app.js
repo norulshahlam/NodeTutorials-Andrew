@@ -13,7 +13,9 @@ the client-side js file we will doing on will be at /js/app.js
 
 4. apply some styling to the form
 
-run: nodemon app.js -e js,hbs,css
+run: nodemon app.js -e js,hbs,css 
+
+5. deply to heroku - refer to readme.md
 */
 
 const express = require("express");

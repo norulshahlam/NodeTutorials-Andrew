@@ -1,7 +1,8 @@
 /*
 continue from previous lesson,
 
-this time we render the res in html, json, 
+this time we send the response in html, json.
+NOTE: this is not returning html file, only in html element 
 
 */
 

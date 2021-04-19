@@ -1,5 +1,5 @@
 /*
-how to access variables / func from other js. simply export variable from that other file
+how to access variables / func from other js files. simply export variable from that other file and import here
 */
 
 const add = require("./utils");

@@ -32,7 +32,7 @@ app.get("/weather", (req, res) => {
   res.send("weather page");
 });
 
-1. set your own port number
+//1. set your own port number
 app.listen(3000, () => {
   console.log("server is up on port 3000");
 });

@@ -1,10 +1,7 @@
 /*
-
 passing argument using yargs. install first: npm i yargs@12.0.2
 
 Yargs helps you build interactive command line tools, by parsing arguments and generating an elegant user interface.
-
-
 
 */
 

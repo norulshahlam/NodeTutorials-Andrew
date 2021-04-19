@@ -1,5 +1,5 @@
 /*
-export multiple modules by using objects.
+export multiple modules by using object.
 
 now we will integrate the yarg command with the json file creation.
 

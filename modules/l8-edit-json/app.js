@@ -13,18 +13,25 @@ const fs = require("fs");
 //3
 const dataBuffer = fs.readFileSync("book.json");
 //4
+
 const dataJson = dataBuffer.toString();
 
-console.log(dataJson);
+
 //5
 const data = JSON.parse(dataJson);
+console.log(data);
+const list = [6,7,8,9,10]
 
 //6
-data.name = "shah";
+data.name = "odeng";
 data.planet = "e";
+data.task = 'sleep'
+data.list=list
+
 
 //7
 const profile2Json = JSON.stringify(data);
+// const profile2Json = JSON.stringify(data,null,2);
 
 //8
 fs.writeFileSync("book.json", profile2Json);

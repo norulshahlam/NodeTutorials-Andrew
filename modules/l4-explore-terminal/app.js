@@ -4,7 +4,7 @@ using input in terminal.
 we can run the js file while inputting a value
 */
 
-//if u print this, it show the value of all related inputs in array. usually the 1st 2 is the system input. then the rest is your input
+//if u print this, it show the value of all related inputs in array. usually the 1st 2 is the system variables. then the rest is your input
 const command = process.argv;
 console.log(command);
 

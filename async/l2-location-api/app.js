@@ -3,7 +3,7 @@ Imagine requesting some data from an API. Depending upon the situation the serve
 That’s where asynchronous JavaScript comes into play. Using asynchronous JavaScript (such as callbacks, promises, and async/await), you can perform long network requests without blocking the main thread.
 
 here we are using weather api to get data. 
-how to use postman to get api data
+how to use postman npm to get api data
 what are the diff options in postmen to use during fetch
 how to use api key
 how to do different query by using diff options

@@ -1,28 +1,30 @@
 /*
 continue from previous lesson,
 
-this time we serve up static assets
+1. this time we serve up static assets. using 'use()' to set up, we can route to the html pages. simply use url with the extension:
 
-make use of path.join() - The path.join() method joins all given path segments together using the platform-specific separator as a delimiter, then normalizes the resulting path. 
+http://localhost:3000/help.html
+http://localhost:3000/about.html
+
+
+NOTE: we can stil use app.use() at the same time. 
+if http://localhost:3000/help is used instead of http://localhost:3000/help.html, then it will go to app.use() instead of static page handler
+
+2. make use of path.join() - The path.join() method joins all given path segments together using the platform-specific separator as a delimiter, then normalizes the resulting path. 
 
 https://nodejs.org/api/path.html#path_path_join_paths
-
-uusing 'use()'
-
-we can route to the html pages insted of creating many response for each url. then we can remove the responsse handler after using 'use()'
-
 
 */
 
 const express = require("express");
 const path = require("path");
 const app = express();
-console.log(__dirname);
+console.log(__dirname); //current dir path
 
 //this is just taking the current dir path and rerouting it
 const publicDir = path.join(__dirname, "/pages");
 
-//this will replace the root url below
+//this will allow us to use static pages
 app.use(express.static(publicDir));
 
 // app.get("", (req, res) => {

@@ -24,7 +24,7 @@ request({ url: url, json: true }, (error, response) => {
   }
 });
 
-// weather api
+// location api
 const url2 =
   "https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1Ijoibm9ydWxzaGFobGFtIiwiYSI6ImNrbXlvdDB4YjA1eXkydm1mbGx2OThwbXYifQ.b3OjSSp1B_p17WJBW7u3BA";
 
