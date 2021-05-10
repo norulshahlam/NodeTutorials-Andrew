@@ -8,8 +8,6 @@ what are the diff options in postmen to use during fetch
 how to use api key
 how to do different query by using diff options
 
-
-
 */
 const request = require("postman-request");
 const url =
@@ -22,6 +20,17 @@ const url =
 
 //here we set the respone to parse the json for us so we dont need to parse it
 request({ url: url, json: true }, (error, response) => {
+  //
+  //chekc if there is error
+  const d = response.body.error;
+  console.log(d);
+  if (response.body.success === false) {
+    return console.log("pls enter url / internet connection");
+  }
+  if (error) {
+    return console.log("pls enter url / internet connection");
+  }
+
   const data = response.body;
   console.log(
     `Temperature is ${data.current.temperature}, but it feels like ${data.current.feelslike}. It is ${data.current.weather_descriptions[0]}`

@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const getNotes = function () {
-  return "your notes...";
+  return "your notes..."; 
 };
 
 const removeNote = function (title) {
