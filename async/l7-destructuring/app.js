@@ -1,7 +1,9 @@
 /*
 1. obj property shorthand
-2. destructuring obj in global scope
+2. destructuring obj in global scope with renaming
 3. destructuring obj as param input
+4 default values
+5. array destructuring
 
 whole goal of  structuring is to extract object properties and their values into individual variables so instead of calling a 'product.price', we could have 'price' variable with the value of 3.
 
@@ -22,11 +24,11 @@ const takeout = {
 };
 
 const product = {
-  name: "shah",
+  name: "bread",
   price: 3,
-  address: "bedok",
-  status: "single",
-  employed: true,
+  country: "London",
+  expiry: "false",
+  Category: "Dry food",
 };
 
 //without destructuring
@@ -44,3 +46,21 @@ const transac = (type, { status, employed } = {}) => {
   console.log(type, status, employed);
 };
 transac("info: ", product);
+
+// 4.
+const { price, promotion = "not stated" } = product;
+console.log("sample 4. \n" + price, promotion);
+
+const fruits = [
+  "apple",
+  "banana",
+  "carrot",
+  "date",
+  "elephant",
+  "fries",
+  "grapefruit",
+];
+
+// 5. Here the vaeiable are defines in order. u can skip an elemnt by using ','. here we skip 3rd element. we can also ignore the reminaing element by doing nothing - we ignore the 4th element onwards
+const [a, b, , d] = fruits;
+console.log(a, b, d);

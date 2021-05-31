@@ -31,3 +31,5 @@ const geocode = (address, callback) => {
 geocode("Singapore", (data) => {
   console.log(data);
 });
+
+console.log(new Date());
