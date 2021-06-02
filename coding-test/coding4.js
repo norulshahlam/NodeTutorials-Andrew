@@ -1,17 +1,17 @@
-let words = ["is", "valid", "id"];
-// let camelCase = "IsValid";
-let camelCase = "IsValIdOneValid";
-let spt = camelCase.replace(/([a-z](?=[A-Z]))/g, "$1 ").split(" ");
-let c = 0;
+const arrCoords = 1203;
 
-for (let j = 0; j < spt.length; j++) {
-  if (words.includes(spt[j].toLowerCase())) {
-    c++;
-    console.log(words + "-" + spt[j]);
-  }
-}
-if (c == spt.length) {
-  console.log(44444);
-}
-console.log(words);
-console.log(spt);
+const triplet = (n) => {
+  const newArr = n.toString().split("").map(Number);
+  let evn = 0;
+  let odd = 0;
+  newArr.forEach((element) => {
+    if (element % 2 === 0) {
+      evn = evn + element;
+    } else {
+      odd = odd + element;
+    }
+  });
+  return evn - odd;
+};
+
+console.log(triplet(arrCoords));
